@@ -1,6 +1,6 @@
 <?php 
-include "includes/database.php";
-include "includes/services.php";
+include "admin/includes/database.php";
+include "admin/includes/services.php";
 
 $database = new database;
 $db =$database->connect();

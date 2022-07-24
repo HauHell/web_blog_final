@@ -1,10 +1,10 @@
 <?php 
-include "../meetme/admin/includes/blog.php";
-include "../meetme/admin/includes/tag.php";
-include "../meetme/admin/includes/database.php";
-include "../meetme/admin/includes/subcribers.php";
-include "../meetme/admin/includes/comment.php";
-include "../meetme/admin/includes/category.php";
+include "admin/includes/blog.php";
+include "admin/includes/tag.php";
+include "admin/includes/database.php";
+include "admin/includes/subcribers.php";
+include "admin/includes/comment.php";
+include "admin/includes/category.php";
 
 $database =new database;
 $db=$database->connect();

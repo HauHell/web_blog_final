@@ -1,8 +1,8 @@
 <?php
-include '../meetme/admin/includes/contact.php';
-include '../meetme/admin/includes/database.php';
-include '../meetme/admin/includes/about.php';
-include "../meetme/admin/includes/category.php";
+include 'admin/includes/contact.php';
+include 'admin/includes/database.php';
+include 'admin/includes/about.php';
+include "admin/includes/category.php";
 
 $database = new database;
 $db =$database->connect();
