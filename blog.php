@@ -249,7 +249,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                         <div class="input-group-prepend">
                                             <div class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i></div>
                                         </div>
-                                        <input type="text" name="sub_email" id="mail" class="form-control" id="inlineFormInputGroup" placeholder="Enter email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'">
+                                        <input type="text" name="sub_email" id="mail" class="form-control" placeholder="Enter email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'">
                                     </div>
                                     <button type="submit" name="created_sub" style="background-color:#007bff; color:#fff;" onclick="checksub()">Subcribe</button>
                                     

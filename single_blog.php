@@ -181,13 +181,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                     if($previous=$prev->fetch()){
                                 ?>
                                     <div  class="thumb">
-                                        <a href="http://127.0.0.1:8080/webthicuoiki/meetme/single_blog.php?id=<?php echo $previous['n_blog_id'] ?>">
+                                        <a href="single_blog.php?id=<?php echo $previous['n_blog_id'] ?>">
                                         <img style="width:100px ;height:70px" class="img-fluid" src="img/blog/<?php echo $previous['v_main_image_url'] ?>" alt=""></a>
                                     </div>
 
                                     <div  class="detials">
                                         <p>Prev Post</p>
-                                        <a href="http://127.0.0.1:8080/webthicuoiki/meetme/single_blog.php?id=<?php echo $previous['n_blog_id'] ?>"><h4 ><?php echo $previous['v_blog_title'] ?></h4></a>
+                                        <a href="single_blog.php?id=<?php echo $previous['n_blog_id'] ?>"><h4 ><?php echo $previous['v_blog_title'] ?></h4></a>
                                     </div>
                                 <?php } ?>
                                 </div>
@@ -198,11 +198,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                     ?>
                                     <div class="detials" >
                                         <p>Next Post</p>
-                                        <a href="http://127.0.0.1:8080/webthicuoiki/meetme/single_blog.php?id=<?php echo $next_blog['n_blog_id'] ?>"><h4><?php echo $next_blog['v_blog_title'] ?></h4></a>
+                                        <a href="single_blog.php?id=<?php echo $next_blog['n_blog_id'] ?>"><h4><?php echo $next_blog['v_blog_title'] ?></h4></a>
                                     </div>
                                    
                                     <div class="thumb" >
-                                        <a href="http://127.0.0.1:8080/webthicuoiki/meetme/single_blog.php?id=<?php echo $next_blog['n_blog_id']?>">
+                                        <a href="single_blog.php?id=<?php echo $next_blog['n_blog_id']?>">
                                         <img class="img-fluid" style="width:100px ;height:70px" src="img/blog/<?php echo $next_blog['v_main_image_url'] ?>" alt=""></a>
                                     </div>	
                                     <?php }?> 										
@@ -392,7 +392,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                                        
                                                    
                                     ?>
-                                    <li><a href="#"><?php echo  $new_tag_item; ?></a></li>
+                                    <li><a href="blog.php?page=1&key=<?php echo  $new_tag_item; ?>"><?php echo  $new_tag_item; ?></a></li>
                                    
                                    <?php }}
                                     }

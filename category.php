@@ -96,11 +96,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                         $get_page = isset($_GET['page'])?$_GET['page']:1;
                                         $begin = (3* $get_page)-3;
                                         
-                                        if(empty($_POST['key'])){
+                                        if(empty($_GET['key'])){
                                             $result=$new_blog->read_category($_GET['title']);
                                         }
                                         else{
-                                            $result=$new_blog->read_search($_POST['key']);
+                                            $result=$new_blog->read_search($_GET['key']);
                                         }
                                        
 									   $num = $result->rowCount();
@@ -139,7 +139,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                         <div class="blog_details">
                                             <a href="single-blog.html"><h2><?php echo $row1['v_blog_title']?></h2></a>
                                             <p><?php echo $row1['v_blog_meta_title']?></p>
-                                            <a href="http://127.0.0.1:8080/webthicuoiki/meetme/single_blog.php?id=<?php echo $row1['n_blog_id']?>" class="white_bg_btn" 
+                                            <a href="single_blog.php?id=<?php echo $row1['n_blog_id']?>" class="white_bg_btn" 
                                            >View More</a>
                                         </div>
                                     </div>
@@ -158,7 +158,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     <div class="col-lg-4">
                         <div class="blog_right_sidebar">
                         <aside class="single_sidebar_widget search_widget">
-                                <form action="" method="POST">
+                                <form action="" method="GET">
                                     <div class="input-group">
                                         <input name="key" type="text" class="form-control" placeholder="Search Posts">
                                         <span class="input-group-btn">
@@ -194,10 +194,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                               
                                 ?>
                                 <div class="media post_item" >
-                                 <a href="http://127.0.0.1:8080/webthicuoiki/meetme/single_blog.php?id=<?php echo $row['n_blog_id'] ?>"><img src="img/blog/<?php echo $row['v_main_image_url'] ?>" width="100px" height="60px" alt="post">
+                                 <a href="single_blog.php?id=<?php echo $row['n_blog_id'] ?>"><img src="img/blog/<?php echo $row['v_main_image_url'] ?>" width="100px" height="60px" alt="post">
                                 </a>
                                     <div class="media-body">
-                                        <a href="http://127.0.0.1:8080/webthicuoiki/meetme/single_blog.php?id=<?php echo $row['n_blog_id'] ?>"><h3><?php echo $row['v_blog_title'] ?></h3></a>
+                                        <a href="single_blog.php?id=<?php echo $row['n_blog_id'] ?>"><h3><?php echo $row['v_blog_title'] ?></h3></a>
                                         <p><?php echo $row['d_time_created'] ?></p>
                                     </div>
                                 </div>
@@ -223,7 +223,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                         <div class="input-group-prepend">
                                             <div class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i></div>
                                         </div>
-                                        <input type="text" name="sub_email" id="mail" class="form-control" id="inlineFormInputGroup" placeholder="Enter email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'">
+                                        <input type="text" name="sub_email" id="mail" class="form-control"  placeholder="Enter email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'">
                                     </div>
                                     <button type="submit" name="created_sub" style="background-color:#007bff; color:#fff;" onclick="checksub()">Subcribe</button>
                                     
@@ -246,7 +246,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                                        
                                                    
                                     ?>
-                                    <li><a href="#"><?php echo  $new_tag_item; ?></a></li>
+                                    <li><a href="blog.php?page=1&key=<?php echo  $new_tag_item; ?>"><?php echo  $new_tag_item; ?></a></li>
                                    
                                    <?php }}
                                     }

@@ -30,7 +30,7 @@
 
 									
 									?>
-										<li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8080/webthicuoiki/meetme/category.php?title=<?php echo $row['v_category_title'] ?>"><?php echo $row['v_category_title'] ?></a></li>
+										<li class="nav-item"><a class="nav-link" href="category.php?title=<?php echo $row['v_category_title'] ?>"><?php echo $row['v_category_title'] ?></a></li>
 										<?php
 										
 									}
