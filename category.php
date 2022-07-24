@@ -135,7 +135,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                </div>
                                 <div class="col-md-9">
                                     <div class="blog_post">
-                                        <img src="../meetme/img/blog/<?php echo $row1['v_main_image_url'];?>" alt="">
+                                        <img src="img/blog/<?php echo $row1['v_main_image_url'];?>" alt="">
                                         <div class="blog_details">
                                             <a href="single-blog.html"><h2><?php echo $row1['v_blog_title']?></h2></a>
                                             <p><?php echo $row1['v_blog_meta_title']?></p>
@@ -194,7 +194,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                               
                                 ?>
                                 <div class="media post_item" >
-                                 <a href="http://127.0.0.1:8080/webthicuoiki/meetme/single_blog.php?id=<?php echo $row['n_blog_id'] ?>"><img src="../meetme/img/blog/<?php echo $row['v_main_image_url'] ?>" width="100px" height="60px" alt="post">
+                                 <a href="http://127.0.0.1:8080/webthicuoiki/meetme/single_blog.php?id=<?php echo $row['n_blog_id'] ?>"><img src="img/blog/<?php echo $row['v_main_image_url'] ?>" width="100px" height="60px" alt="post">
                                 </a>
                                     <div class="media-body">
                                         <a href="http://127.0.0.1:8080/webthicuoiki/meetme/single_blog.php?id=<?php echo $row['n_blog_id'] ?>"><h3><?php echo $row['v_blog_title'] ?></h3></a>

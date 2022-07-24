@@ -134,7 +134,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                </div>
                                 <div class="col-md-9">
                                     <div class="blog_post">
-                                    <img src="../meetme/img/blog/<?php echo $row1['v_main_image_url'];?>" alt="">
+                                    <img src="img/blog/<?php echo $row1['v_main_image_url'];?>" alt="">
                                         <div class="blog_details">
                                             <a href="single-blog.html"><h2><?php echo $row1['v_blog_title']?></h2></a>
                                             <p><?php echo $row1['v_blog_meta_title']?></p>
@@ -220,7 +220,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                               
                                 ?>
                                 <div class="media post_item">
-                                    <img src="../meetme/img/blog/<?php echo $row['v_main_image_url'] ?>" width="100px" height="60px" alt="post">
+                                    <img src="img/blog/<?php echo $row['v_main_image_url'] ?>" width="100px" height="60px" alt="post">
                                     <div class="media-body">
                                         <a href="blog.php"><h3><?php echo $row['v_blog_title'] ?></h3></a>
                                         
