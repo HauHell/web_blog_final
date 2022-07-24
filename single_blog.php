@@ -5,6 +5,7 @@ include "admin/includes/database.php";
 include "admin/includes/subcribers.php";
 include "admin/includes/comment.php";
 include "admin/includes/category.php";
+include "admin/includes/about.php";
 
 $database =new database;
 $db=$database->connect();
@@ -314,9 +315,23 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     <div class="col-lg-4">
                         <div class="blog_right_sidebar">
                            
+                        <div class="br"></div>
+                                <?php 
+                                        $new_about = new about($db);
+                                        $result = $new_about->read();
+                                        $num = $result->rowCount();
+                                        if($num >0){
+                                        $row =$result->fetch();
+                                        ?>
+                            </aside>
+                            
                             <aside class="single_sidebar_widget author_widget">
-                                <img class="author_img rounded-circle" src="img/profile/avatar2.jpg" width="200px" height="300px" alt="">
-                                <h4>Ngo Quang Hau</h4>
+                               
+                                     
+                                <img class="author_img rounded-circle" src="img/profile/<?php echo $row['v_image_url']  ?>" width="200px" height="300px" alt="">
+                                           
+                                <h4><?php echo $row['v_name']  ?></h4>
+                                
                                 <p>Senior blog writer</p>
                                 <div class="social_icon">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
@@ -327,6 +342,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                 <p>Boot camps have its supporters andit sdetractors. Some people do not understand why you should have to spend money on boot camp when you can get. Boot camps have itssuppor ters andits detractors.</p>
                                 <div class="br"></div>
                             </aside>
+                            <?php } ?>
                             <aside class="single_sidebar_widget popular_post_widget">
                                 <h3 class="widget_title">Popular Posts</h3>
                                 <?php 
