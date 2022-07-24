@@ -68,8 +68,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         
         //check update
         if(@$new_blog->update()){
-            print_r($_POST);
-            echo $new_blog->f_post_status;
         $flag="Update Successfully!";
         $new_tag =new tag($db);
         $new_tag->n_blog_id=$_POST['blog_id'];
