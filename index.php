@@ -1,7 +1,7 @@
 <?php 
-include "../meetme/admin/includes/category.php";
-include "../meetme/admin/includes/about.php";
-include "../meetme/admin/includes/database.php";
+include "admin/includes/category.php";
+include "admin/includes/about.php";
+include "admin/includes/database.php";
 
 $database = new database();
 $db = $database->connect();
