@@ -64,7 +64,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         
         <!--================Home Banner Area =================-->
         <section class="home_banner_area blog_banner" >
-            <div class="banner_inner d-flex align-items-center" style="background-image: url('../meetme/img/blog/admin.jpg');background-size: cover;">
+            <div class="banner_inner d-flex align-items-center" style="background-image: url('img/blog/admin.jpg');background-size: cover;">
             	<div data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
 				<div class="container">
 					<div class="blog_b_text text-center">
