@@ -340,7 +340,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                               
                                 ?>
                                 <div class="media post_item">
-                                    <img src="img/blog/popular-post/post1.jpg" alt="post">
+                                    <img src="img/blog/<?php echo $row['v_main_image_url'] ?>" width="100px" height="60px" alt="post">
                                     <div class="media-body">
                                         <a href="blog.php"><h3><?php echo $row['v_blog_title'] ?></h3></a>
                                         
