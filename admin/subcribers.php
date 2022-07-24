@@ -1,6 +1,8 @@
 <?php 
 include "includes/database.php";
 include "includes/subcribers.php";
+include "includes/about.php";
+
 
 $database =new database();
 $db=$database->connect();
@@ -30,12 +32,13 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../img/favicon5.png" type="image/png">
     <meta name="description" content="au theme template">
     <meta name="author" content="Hau Nguyen">
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>NQH Blog</title>
+    <title>NQH Subcribers</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -119,10 +122,9 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
                                                 <td ><?php echo $row['d_date_created']; ?></td>
                                                 <td ><?php echo $row['d_time_created']; ?></td>
     
-                                                
-                                                <td class="text-right"> <button type="button" class="btn btn-secondary mb-1" data-toggle="modal" data-target="#smallmodal">	Views </button>
+                                                <td>
                                                 <button type="button" class="btn btn-secondary mb-1" name="delete" data-toggle="modal" data-target="#delete_sub<?php echo $row['n_sub_id'] ?>">Delete</button>
-										    
+										      </td>
                                             </tr>
                                            
                                         </tbody>

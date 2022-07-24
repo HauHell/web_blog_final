@@ -57,12 +57,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../img/favicon5.png" type="image/png">
     <meta name="description" content="au theme template">
     <meta name="author" content="Hau Nguyen">
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Forms</title>
+    <title>NQH Edit User Profile</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -131,7 +132,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                         </div>
 
                                         <div class="form-group">
-                                            <label>Date Born</label>
+                                            <label>Date of Birth</label>
                                             <input name="dateborn" value="<?php echo $row_user['d_date_born'] ?>" 
                                             class="form-control" placeholder="Enter Email">
                                         </div>
@@ -199,7 +200,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                             <?php if(empty($row_user['v_image_url']))
                                             {
                                                 ?>
-                                            <img class="img-thumbnail" src="../img/profile/avatar2.jpg" alt="Hau" width="200px">
+                                            <img class="img-thumbnail" src="../img/profile/<?php echo $row_user['v_image_url'] ?>" alt="Hau" width="200px">
                                         <?php }
                                         else
                                         {

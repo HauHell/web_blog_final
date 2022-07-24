@@ -4,6 +4,8 @@
       include "includes/contact.php";
       include "includes/comment.php";
       include "includes/blog.php";
+      include "includes/about.php";
+
     
     $database =new database();
     $db=$database->connect();
@@ -23,6 +25,7 @@
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../img/favicon5.png" type="image/png">
     <meta name="description" content="au theme template">
     <meta name="author" content="Hau Nguyen">
     <meta name="keywords" content="au theme template">

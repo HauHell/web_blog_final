@@ -3,6 +3,8 @@ include "includes/database.php";
 include "includes/blog.php";
 include "includes/tag.php";
 include "includes/category.php";
+include "includes/about.php";
+
 
 
 $database = new database();
@@ -29,12 +31,13 @@ if(isset($_GET['id'])){
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../img/favicon5.png" type="image/png">
     <meta name="description" content="au theme template">
     <meta name="author" content="Hau Nguyen">
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Forms</title>
+    <title>NQH Edit Blog</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -63,17 +66,18 @@ if(isset($_GET['id'])){
 <body class="animsition">
     <div class="page-wrapper">
         <!-- HEADER MOBILE-->
-    
-        <!-- END MENU SIDEBAR-->
+      
+  <?php include 'header.php'; ?>
 
-        <!-- PAGE CONTAINER-->
-        <div class="page-container">
-            <!-- HEADER DESKTOP-->
+<!-- PAGE CONTAINER-->
+<div class="page-container">
+    <!-- HEADER DESKTOP-->
+    <?php include "menu.php"; ?>>
    
             <!-- HEADER DESKTOP-->
 
             <!-- MAIN CONTENT-->
-            <div class="card" style="margin-top: 100px; width:800px ;margin-left:50px" >
+            <div class="card" style="margin-top: 100px; width:800px ;margin-left:100px" >
                    
                                     <div class="card-header">
                                         <strong>Edit Blog</strong>

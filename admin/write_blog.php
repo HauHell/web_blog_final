@@ -3,6 +3,8 @@ include "includes/database.php";
 include "includes/blog.php";
 include "includes/tag.php";
 include "includes/category.php";
+include "includes/about.php";
+
 
 $database = new database();
 $db = $database->connect();
@@ -20,6 +22,7 @@ $new_blog = new blog($db);
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../img/favicon5.png" type="image/png">
     <meta name="description" content="au theme template">
     <meta name="author" content="Hau Nguyen">
     <meta name="keywords" content="au theme template">

@@ -2,7 +2,7 @@
 include "includes/database.php";
 include "includes/blog.php";
 include "includes/tag.php";
-
+include "includes/about.php";
 $database =new database();
 $db=$database->connect();
 
@@ -171,6 +171,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../img/favicon5.png" type="image/png">
     <meta name="description" content="au theme template">
     <meta name="author" content="Hau Ngo">
     <meta name="keywords" content="au theme template">
@@ -268,7 +269,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                                                 <input type="hidden" name="alt_image" value="<?php echo $row['v_alt_image_url'] ?>">
                                                 <input type="hidden" name="sub_image" value="<?php echo $row['v_sub_image_url'] ?>">
                                                 
-                                                <td class="text-right"> <button type="button" class="btn btn-secondary mb-1" data-toggle="modal" data-target="#smallmodal">	Views </button>
+                                                <td class="text-right"> <button type="button" onclick="location.href='../single_blog.php?id=<?php echo $row['n_blog_id']?>'" class="btn btn-secondary mb-1" data-toggle="modal" data-target="#smallmodal">	Views </button>
                                               <button type="button" class="btn btn-secondary mb-1" onclick="location.href='edit_blog.php?id=<?php echo $row['n_blog_id']?>'" data-toggle="modal" data-target="#smallmodal">	Edit </button>
                                                <button type="button" class="btn btn-secondary mb-1" name="delete"  data-toggle="modal" data-target="#delete<?php echo $row['n_blog_id'] ?>">Delete </button></td>
                                              

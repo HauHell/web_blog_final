@@ -1,6 +1,8 @@
 <?php  
 include "includes/database.php";
 include "includes/category.php";
+include "includes/about.php";
+
 
 $database = new database();
 $db = $database->connect();
@@ -67,12 +69,13 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../img/favicon5.png" type="image/png">
     <meta name="description" content="au theme template">
-    <meta name="author" content="Hau Nguyen">
+    <meta name="author" content="Hau Ngo">
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Dashboard</title>
+    <title>NQH Category</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -179,7 +182,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                                                 <td><?php echo $rows['v_category_meta_title'] ?></td>
                                                 <td><?php echo $rows['v_category_path'] ?></td>
                                                 <td>
-                                                	<button class="btn btn-secondary mb-1">View</button>
+                                                	<button class="btn btn-secondary mb-1" onclick="location.href='../category.php?title=<?php echo $rows['v_category_title']?>'">View</button>
                                                 	<button class="btn btn-secondary mb-1" type="button" data-toggle="modal" data-target="#edit<?php echo $rows['n_category_id']?>">Edit</button>
                                                 	<button type="button" class="btn btn-secondary mb-1" data-toggle="modal" data-toggle="modal" data-target="#delete<?php echo $rows['n_category_id']?>">Delete</button>
                                                     
