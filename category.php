@@ -286,12 +286,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         <script src="js/mail-script.js"></script>
         <script src="js/theme.js"></script>
         <script >
-            function checksub(){
+              function checksub(){
                 if(document.getElementById("mail").value!=""){
-                alert("Bạn đã đăng kí thành công");
+                alert("Thanks for subscribing");
                }
                else{
-                alert("Bạn chưa nhập thông tin email");
+                alert("Please enter your email");
                }
             }
             function checkpage(){
