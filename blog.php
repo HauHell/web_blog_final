@@ -94,11 +94,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                         <?php 
                                         $get_page = isset($_GET['page'])?$_GET['page']:1;
                                         $begin = (3* $get_page)-3;
-                                        if(empty($_POST['key'])){
+                                        if(empty($_GET['key'])){
                                             $result=$new_blog->read2($begin);
                                         }
                                         else{
-                                            $result=$new_blog->read_search($_POST['key']);
+                                            $result=$new_blog->read_search($_GET['key']);
                                         }
                                        
 									   $num = $result->rowCount();
@@ -138,7 +138,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                         <div class="blog_details">
                                             <a href="single-blog.html"><h2><?php echo $row1['v_blog_title']?></h2></a>
                                             <p><?php echo $row1['v_blog_meta_title']?></p>
-                                            <a href="http://127.0.0.1:8080/webthicuoiki/meetme/single_blog.php?id=<?php echo $row1['n_blog_id']?>" class="white_bg_btn" 
+                                            <a href="single_blog.php?id=<?php echo $row1['n_blog_id']?>" class="white_bg_btn" 
                                            >View More</a>
                                         </div>
                                     </div>
@@ -150,7 +150,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                             <nav class="blog-pagination justify-content-center d-flex">
 		                        <ul class="pagination">
 		                            <li class="page-item" id="b<?php echo $get_page ?>" value="<?php echo $get_page ?>">
-		                                <a href="http://127.0.0.1:8080/webthicuoiki/meetme/blog.php?page=<?php echo $get_page-1 ?>" class="page-link" aria-label="Previous">
+		                                <a href="blog.php?page=<?php echo $get_page-1 ?>&key=<?php echo $_GET['key'] ?>" class="page-link" aria-label="Previous">
 		                                    <span aria-hidden="true">
 		                                        <span class="lnr lnr-chevron-left"></span>
 		                                    </span>
@@ -166,12 +166,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                                
                                               
                                     
-                                        ?>
+                                        ?>  
                                       
-		                            <li class="page-item"  id="<?php echo $i+1 ?>"    ><a href="<?php echo "http://127.0.0.1:8080/webthicuoiki/meetme/blog.php?page=$num "?>" class="page-link"><?php echo $i+1  ?></a></li>
+		                            <li class="page-item"  id="<?php echo $i+1 ?>"    ><a href="<?php echo "blog.php?page=$num "?>" class="page-link"><?php echo $i+1  ?></a></li>
                                             <?php      }} ?>
 		                            <li class="page-item" id="a<?php echo $get_page?>" value="<?php echo $get_page ?>">
-		                                <a href="http://127.0.0.1:8080/webthicuoiki/meetme/blog.php?page=<?php echo $get_page+1 ?>" class="page-link" aria-label="Next">
+		                                <a href="blog.php?page=<?php echo $get_page+1 ?>&key=<?php echo $_GET['key'] ?>" class="page-link" aria-label="Next">
 		                                    <span aria-hidden="true">
 		                                        <span class="lnr lnr-chevron-right"></span>
 		                                    </span>
@@ -184,7 +184,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     <div class="col-lg-4">
                         <div class="blog_right_sidebar">
                             <aside class="single_sidebar_widget search_widget">
-                                <form action="" method="POST">
+                                <form action="blog.php?page=1" method="GET">
                                     <div class="input-group">
                                         <input name="key" type="text" class="form-control" placeholder="Search Posts">
                                         <span class="input-group-btn">
@@ -270,9 +270,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                                  
                                                       foreach ($new_tag_arr as $new_tag_item) {
                                                        
-                                                   
+                                                      
                                     ?>
-                                    <li><a href="#"><?php echo  $new_tag_item; ?></a></li>
+                                    <li><a href="blog.php?page=1&key=<?php echo  $new_tag_item; ?>"><?php echo  $new_tag_item; ?></a></li>
                                    
                                    <?php }}
                                     }
