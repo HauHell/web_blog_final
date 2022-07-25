@@ -83,13 +83,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         <!--================Contact Area =================-->
         <section class="contact_area p_120">
             <div class="container">
-                <div id="mapBox" class="mapBox" 
-                    data-lat="40.701083" 
-                    data-lon="-74.1522848" 
-                    data-zoom="13" 
-                    data-info="PO Box CT16122 Collins Street West, Victoria 8007, Australia."
-                    data-mlat="40.701083"
-                    data-mlon="-74.1522848">
+                <div
+                   style="margin-bottom:20px"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.949849184091!2d106.61956781482002!3d10.738348741961591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752dd9fa888e8d%3A0x2321791a8847d2e1!2zNTkgQW4gRC4gVsawxqFuZywgUGjGsOG7nW5nIDEwLCBRdeG6rW4gNiwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1658753041457!5m2!1svi!2s" width="1150" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="row">
                     <div class="col-lg-3" style="margin-right: 10px;">
